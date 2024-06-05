@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Kelurahan extends Model
 {
     use HasFactory;
+    // kalau tidak pake kelurahan "S" jadi ditambahin manual protected nya
     protected $table="kelurahan";
     protected $fillable= ['nama','kecamatan_nama'];
 }
