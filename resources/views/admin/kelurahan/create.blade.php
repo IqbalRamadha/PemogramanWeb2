@@ -22,7 +22,7 @@
               <div class="col-sm-4"></div>
               <div class="col-sm-8">
                   <button type="submit" class="btn btn-primary">Simpan</button>
-                  <button type="reset" class="btn btn-warning">Reset</button>
+                  <button type="reset" class="btn btn-success">Reset</button>
               </div>
           </div>
         </form>
