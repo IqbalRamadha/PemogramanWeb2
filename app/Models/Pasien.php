@@ -9,4 +9,9 @@ class Pasien extends Model
 {
     use HasFactory;
     protected $fillable= ['kode','nama','tempat_lahir','tanggal_lahir','jenis_kelamin','email','alamat','kelurahan_id'];
+    public function kelurahan()
+    {
+        return $this->belongsTo(Kelurahan::class);
+    }
+
 }

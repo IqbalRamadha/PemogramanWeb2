@@ -11,4 +11,8 @@ class Kelurahan extends Model
     // kalau tidak pake kelurahan "S" jadi ditambahin manual protected nya
     protected $table="kelurahan";
     protected $fillable= ['nama','kecamatan_nama'];
+    public function pasien()
+{
+    return $this->hasMany(Pasien::class);
+}
 }

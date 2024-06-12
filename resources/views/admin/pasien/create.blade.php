@@ -1,7 +1,7 @@
 <x-layout>
     <x-slot name="page_name">Halaman Pasien  / Create</x-slot>
     <x-slot name="page_content">
-        <form class="forms-sample" action="{{ url('dashboard/pasien/store') }}" method="post">
+    <form class="forms-sample" action="{{ url('dashboard/pasien/store') }}" method="post">
            @csrf
            
            <div class="form-group row">
@@ -19,26 +19,26 @@
             <div class="form-group row">
                 <label for="tmp_lahir" class="col-sm-4 col-form-label">Tempat Lahir</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="tmp_lahir" name="tmp_lahir"
+                    <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir"
                         placeholder="Tempat Lahir pasien">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="tgl_lahir" class="col-sm-4 col-form-label">Tanggal Lahir</label>
                 <div class="col-sm-3">
-                    <input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir"
-                        placeholder="Tanggal LahirPasien">
+                    <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir"
+                        placeholder="Tanggal Lahir Pasien">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="gender" class="col-sm-4 col-form-label">Gender</label>
                 <div class="col-sm-8">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="gender" id="gender_male" value="L">
+                        <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin" value="L">
                         <label class="form-check-label" for="gender_male">Laki-laki</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="gender" id="gender_female" value="K">
+                        <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin" value="P">
                         <label class="form-check-label" for="gender_female">Perempuan</label>
                     </div>
                 </div>
@@ -59,10 +59,10 @@
             <div class="form-group row">
                 <label for="kel_nama" class="col-sm-4 col-form-label">Kelurahan</label>
                 <div class="col-sm-8">
-                    <select class="form-control" id="kec_nama" name="kec_nama">
+                    <select class="form-control" id="kelurahan_id" name="kelurahan_id">
                         <option value="">Pilih Kelurahan</option>
-                        @foreach($pasiens as $pasien)
-                        <option value="{{ $pasien->nama }}">{{ $pasien->nama }}</option>
+                        @foreach($kelurahans as $pasien)
+                        <option value="{{ $pasien->kelurahan_id }}">{{ $pasien->kelurahan_id }}</option>
                         @endforeach
                     </select>
                 </div>
